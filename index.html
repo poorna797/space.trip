@@ -1,0 +1,253 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+    <style>
+        body{
+            /* background-color: black; */
+            background-image: url('galaxy.jpg');
+            /* width:calc(100%*5); */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            
+
+            
+        }
+        .circle{
+            border: 0px solid;
+            height: 4cm;
+            width: 4cm;
+            border-radius: 2cm;
+            border-color: blue;
+            background-color: transparent;
+            /* margin: 10cm; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .circle{
+            -webkit-animation-name: rotation ;
+            -webkit-transform-origin: top right ;
+            position: relative;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-delay: 0s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction:alternate;
+            -webkit-animation-fill-mode:  forwards;
+            /* animation: "slideleft 2s ease-in 0s 1 normal forwards"; */
+
+            /* transform: translateX(10px); */
+        }
+        @keyframes rotation{
+          from{
+            -webkit-transform: rotate(0deg);
+            }
+            to{
+            -webkit-transform: rotate(360deg);
+            }
+        }
+        .orbits{
+            display: flex;
+            animation-name: orbit;
+            position:relative;
+            animation-duration: 6s;
+            animation-timing-function:linear;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction:normal;
+            animation-fill-mode:  forwards;
+        }
+
+        @keyframes orbit{
+            0% { left: 0px; top: 0px;}
+            10% {left: 265px; top: 265px;}
+            20% { left: 0px; top: 530px;}
+            30% { left: -265px; top: 265px;}
+            40% { left: -500px; top: 100px;}
+            50% { left: 0px; top: 50px;}
+            60% { left: 500px; top: 400px;}
+
+            70% { left: -50px; top: 530px;}
+            80% { left: -500px; top: 60px;}
+            90% { left: -500px; top: 80px;}
+
+            95%{ left: 500px; top: 50px;}
+            100%{left: 0px; top: 0px;}
+
+        }
+         
+        .circle2{
+            animation-name:rotation ;
+            position:relative;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction:normal;
+            animation-fill-mode:  forwards;
+            animation-play-state: paused;
+        }
+
+
+        /* @keyframes rotation{
+          from{
+            transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(720deg);
+            }
+
+            0% { left: 0px; top: 0px;}
+            80%{ left: 1px; top: 1px; }
+        } */
+        .btn{
+            border: 5px solid;
+            height: 1.2cm;
+            width: 2.5cm;
+            background-color: aqua;
+            border-radius: 0.5cm;
+            border-color: rgb(33, 143, 233);
+            color: black;
+            font-size: large;
+            font-weight:1000;
+            /* margin-top: 2cm; */
+            /* margin-right: 10cm; */
+
+            transition-property: transform;
+            transition-duration: 0.1s;
+            transition-timing-function: linear;
+            transition-delay: 0s;
+            /* transition : transform 0.3s ease 0s   -- we can use all 4 properties in a single line*/
+            transition: background-color 0.6s,color 0.9s;
+        }
+        .btn:hover{
+            transform: translateY(-5px);
+            background-color: var(--clr-accent);
+            color: var(--clr-light);
+        }
+
+        .btn1{
+            border: 5px solid;
+            height: 1.2cm;
+            width: 2.5cm;
+            background-color: red;
+            border-radius: 0.5cm;
+            border-color: aqua;
+            color: black;
+            font-size: large;
+            font-weight:1000;
+            /* margin-top: 2cm; */
+            /* margin-right: 10cm; */
+
+            transition-property: transform;
+            transition-duration: 0.1s;
+            transition-timing-function: in-ease;
+            transition-delay: 0s;
+            /* transition : transform 0.3s ease 0s   -- we can use all 4 properties in a single line*/
+            transition: background-color 0.6s,color 0.9s;
+        }
+        .btn1:hover{
+            transform: translateY(-5px);
+            background-color: var(--clr-accent);
+            color: var(--clr-light);
+        }
+
+        .btn2{
+        border: 5px solid;
+            height: 1.2cm;
+            width: 2.5cm;
+            background-color: rgb(187, 252, 56);
+            border-radius: 0.5cm;
+            border-color: aqua;
+            color: black;
+            font-size: large;
+            font-weight:1000;
+            /* margin-top: 2cm; */
+            /* margin-right: 10cm; */
+
+            transition-property: transform;
+            transition-duration: 0.1s;
+            transition-timing-function: in-ease;
+            transition-delay: 0s;
+            /* transition : transform 0.3s ease 0s   -- we can use all 4 properties in a single line*/
+            transition: background-color 0.6s,color 0.9s;
+        }
+        .btn2:hover{
+            transform: translateY(-5px);
+            background-color: var(--clr-accent);
+            color: var(--clr-light);
+        }
+
+        html::-webkit-scrollbar{
+    display: none;
+}
+
+    </style>
+</head>
+<body>
+    <div class="box">
+    <div class="circle"><i class="start"> <img  id="race" src="satellite.png" alt=" CAR" height="150px"
+        width="150px"></i></div>
+    </div>
+    <br><br><br><br>
+    <p>
+        <button class="btn" onmouseover="f1()"> START</button>
+    </p>
+    <p>
+        <button class="btn1" onmouseover="f2()"> STOP</button>
+    </p>
+    <p>
+        <button class="btn2" onmouseover="f3()">SLOW</button>
+    </p>
+
+
+    <script>
+
+        document.querySelector(".box").className="orbits";
+        function f1(){
+            document.querySelector(".orbits").style.webkitAnimationPlayState="running";
+            document.querySelector(".circle").style.webkitAnimationDuration="0.01s";
+            document.querySelector(".circle").style.webkitTransformOrigin="top left";
+
+
+        }
+        function f2(){
+            // document.querySelector(".circle1").remove();
+            document.querySelector(".orbits").style.webkitAnimationPlayState="paused";
+            document.querySelector(".circle").style.webkitAnimationDuration="0.01s";
+            document.querySelector(".circle").style.webkitTransformOrigin="center";
+
+            
+
+        }
+        function f3(){
+            document.querySelector(".orbits").style.webkitAnimationPlayState="paused";
+            document.querySelector(".circle").style.webkitAnimationDuration="4s";
+
+            document.querySelector(".circle").style.webkitTransformOrigin="center";
+            document.querySelector(".circle").style.webkitAnimationDirection="normal";
+
+        }
+
+        document.addEventListener("keyup" , e=>{
+            f1()
+        });
+        // document.addEventListener("keydown" , e=>{
+        //     f2()
+        // });
+        // document.addEventListener("keyleft" , e=>{
+        //     f3()
+        // })
+
+    </script>
+</body>
+</html>
